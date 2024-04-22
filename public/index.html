@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/thumbs-up.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Crewmates!!</title>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <!-- New content to be added -->
+  <div class="main"></div>
+  <!-- JavaScript snippet -->
+  <script>
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    
+    const STAR_COUNT = 400;
+    let result = "";
+    for(let i = 0; i < STAR_COUNT; i++){
+      result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`;
+    }
+    console.log(result.substring(0, result.length - 1));
+  </script>
+</body>
+</html>
